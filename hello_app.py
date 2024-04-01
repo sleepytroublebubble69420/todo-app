@@ -11,9 +11,11 @@ class MyWidget(QtWidgets.QWidget):
         self.button = QtWidgets.QPushButton("Click Me!")
         self.text = QtWidgets.QLabel("Hello App!",
                                      alignment=QtCore.Qt.AlignCenter)
+        self.text_edit = QtWidgets.QTextEdit()
 
         self.layout = QtWidgets.QVBoxLayout(self)
         self.layout.addWidget(self.text)
+        self.layout.addWidget(self.text_edit)
         self.layout.addWidget(self.button)
 
         self.button.clicked.connect(self.magic)
