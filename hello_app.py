@@ -14,9 +14,9 @@ class MyWidget(QtWidgets.QWidget):
         self.text_edit = QtWidgets.QTextEdit()
 
         self.layout = QtWidgets.QVBoxLayout(self)
-        self.layout.addWidget(self.text)
+        # self.layout.addWidget(self.text)
         self.layout.addWidget(self.text_edit)
-        self.layout.addWidget(self.button)
+        # self.layout.addWidget(self.button)
 
         self.button.clicked.connect(self.magic)
 
