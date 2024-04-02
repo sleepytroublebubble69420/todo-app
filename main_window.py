@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
 
         self.button = QPushButton("Push me", self)
         self.button.released.connect(self.print_txt)
-        self.add_widget(self.button)
+        self.setCentralWidget(self.button)
 
     @Slot()
     def print_txt(self):
