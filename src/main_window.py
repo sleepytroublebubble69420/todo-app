@@ -1,6 +1,6 @@
-import sys
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import QMainWindow, QApplication, QPushButton
+
 
 class MainWindow(QMainWindow):
     def __init__(self, app: QApplication):
@@ -8,8 +8,10 @@ class MainWindow(QMainWindow):
 
         self.app: QApplication = app
 
-        self.button = QPushButton("Push me", self)
-        self.button.released.connect(self.print_txt)
+        self.button: QPushButton = QPushButton("Push me", self)
+        button = self.button
+        button.sizeHint(100, 60)
+        button.released.connect(self.print_txt)
         self.setCentralWidget(self.button)
 
     @Slot()
