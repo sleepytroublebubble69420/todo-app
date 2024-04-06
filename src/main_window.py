@@ -8,5 +8,3 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.app: QApplication = app
-        centralWidget: TodoList = TodoList(self)
-        self.setCentralWidget(centralWidget)
