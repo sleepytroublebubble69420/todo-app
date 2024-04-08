@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QHBoxLayout, QCheckBox
+from PySide6.QtWidgets import QWidget, QHBoxLayout, QCheckBox, QLabel
 
 
 class Todo(QWidget):
@@ -7,4 +7,5 @@ class Todo(QWidget):
 
         layout: QHBoxLayout = QHBoxLayout()
         self.setLayout(layout)
+        layout.addWidget(QLabel("Todo"))
         layout.addWidget(QCheckBox())

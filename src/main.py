@@ -13,11 +13,7 @@ def main():
     todo_list: TodoList = TodoList(main_window)
     main_window.setCentralWidget(todo_list)
 
-    item: QListWidgetItem = QListWidgetItem("testasrtieansotienastenaston")
-    todo_list.addItem(item)
-    todo1: Todo = Todo()
-    item.setSizeHint(todo1.minimumSizeHint())
-    todo_list.setItemWidget(item, todo1)
+    todo_list.add_todo()
 
     main_window.show()
 
