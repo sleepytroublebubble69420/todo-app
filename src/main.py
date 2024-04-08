@@ -13,7 +13,8 @@ def main():
     todo_list: TodoList = TodoList(main_window)
     main_window.setCentralWidget(todo_list)
 
-    todo_list.add_todo()
+    todo_list.add_todo("a")
+    todo_list.add_todo("b")
 
     main_window.show()
 
