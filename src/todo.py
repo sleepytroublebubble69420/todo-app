@@ -10,10 +10,10 @@ class Todo(QWidget):
         self.setLayout(layout)
 
         self.label: QLabel = QLabel(label)
-        layout.addWidget(self.label)
+        layout.addWidget(self.label, 9)
 
         self.button: QPushButton = QPushButton()
-        layout.addWidget(self.button)
+        layout.addWidget(self.button, 1)
         self.button.clicked.connect(self.on_button_clicked)
 
     @Slot()

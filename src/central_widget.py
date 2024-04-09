@@ -16,4 +16,4 @@ class CentralWidget(QWidget):
         layout.addWidget(todo_list)
         layout.addWidget(todo_builder)
 
-        todo_builder.submitted.connect(lambda: print("test"))
+        todo_builder.submitted.connect(todo_list.add_todo)
