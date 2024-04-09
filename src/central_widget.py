@@ -1,5 +1,5 @@
-from Pyside6.QtCore import Slot
-from Pyside6.QtWidgets import QPushButton, QWidget, QVBoxLayout
+from PySide6.QtCore import Slot
+from PySide6.QtWidgets import QPushButton, QWidget, QVBoxLayout
 from todo_list import TodoList
 
 
@@ -14,9 +14,6 @@ class CentralWidget(QWidget):
         self.setLayout(layout)
         layout.addWidget(self.todo_list)
         layout.addWidget(self.add_todo_button)
-
-        self.todo_list.add_todo("a")
-        self.todo_list.add_todo("b")
 
         self.add_todo_button.clicked.connect(self.on_button_clicked)
 
