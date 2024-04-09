@@ -14,8 +14,8 @@ class Todo(QWidget):
 
         self.button: QPushButton = QPushButton()
         layout.addWidget(self.button)
-        self.button.clicked.connect(self.on_box_checked)
+        self.button.clicked.connect(self.on_button_clicked)
 
     @Slot()
-    def on_box_checked(self):
+    def on_button_clicked(self):
         print(self.label.text())
