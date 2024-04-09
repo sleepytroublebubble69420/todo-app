@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication
 from main_window import MainWindow
-from todo_list import TodoList
+from central_widget import CentralWidget
 
 
 def main():
@@ -9,11 +9,8 @@ def main():
 
     main_window: MainWindow = MainWindow(app)
 
-    todo_list: TodoList = TodoList(main_window)
-    main_window.setCentralWidget(todo_list)
-
-    todo_list.add_todo("a")
-    todo_list.add_todo("b")
+    central_widget = CentralWidget(main_window)
+    main_window.setCentralWidget(central_widget)
 
     main_window.show()
 
