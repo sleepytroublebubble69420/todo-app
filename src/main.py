@@ -1,8 +1,7 @@
 import sys
-from PySide6.QtWidgets import QApplication, QListWidgetItem
+from PySide6.QtWidgets import QApplication
 from main_window import MainWindow
 from todo_list import TodoList
-from todo import Todo
 
 
 def main():
