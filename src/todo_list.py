@@ -9,6 +9,11 @@ class TodoList(QListWidget):
     def add_todo(self, label=None):
         item: QListWidgetItem = QListWidgetItem()
         self.addItem(item)
-        todo1: Todo = Todo(label)
-        item.setSizeHint(todo1.minimumSizeHint())
-        self.setItemWidget(item, todo1)
+
+        todo: Todo = Todo(label)
+        item.setSizeHint(todo.minimumSizeHint())
+        self.setItemWidget(item, todo)
+        todo.button.clicked.connect(lambda: self.remove_todo(item))
+
+    def remove_todo(self, item: QListWidget):
+        self.takeItem(self.row(item))
