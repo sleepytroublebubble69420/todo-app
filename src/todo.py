@@ -17,5 +17,6 @@ class Todo(QWidget):
         self.check_box.stateChanged.connect(self.on_box_checked)
 
     @Slot()
-    def on_box_checked(self):
+    def on_box_checked(self, state):
         print(self.label.text())
+        print(state)
