@@ -8,12 +8,12 @@ class CentralWidget(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        todo_list: TodoList = TodoList(self)
+        self.todo_list: TodoList = TodoList(self)
         todo_builder: TodoBuilder = TodoBuilder(self)
 
         layout = QVBoxLayout(self)
         self.setLayout(layout)
-        layout.addWidget(todo_list)
+        layout.addWidget(self.todo_list)
         layout.addWidget(todo_builder)
 
-        todo_builder.submitted.connect(todo_list.add_todo)
+        todo_builder.submitted.connect(self.todo_list.add_todo)
