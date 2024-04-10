@@ -1,4 +1,4 @@
-from PySide6.QtCore import Signal
+from PySide6.QtCore import Signal, Slot
 from PySide6.QtWidgets import QLineEdit, QPushButton, QWidget, QHBoxLayout
 
 
@@ -20,6 +20,7 @@ class TodoBuilder(QWidget):
         self.line_edit.returnPressed.connect(button.clicked)
         button.clicked.connect(self.submit_todo)
 
+    @Slot()
     def submit_todo(self):
         todo_label = self.line_edit.text()
         self.submitted.emit(todo_label)
