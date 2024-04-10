@@ -17,4 +17,5 @@ class TodoBuilder(QWidget):
         layout.addWidget(line_edit)
         layout.addWidget(button)
 
+        line_edit.returnPressed.connect(button.clicked)
         button.clicked.connect(self.submitted.emit)
