@@ -24,3 +24,4 @@ class TodoBuilder(QWidget):
     def submit_todo(self):
         todo_label = self.line_edit.text()
         self.submitted.emit(todo_label)
+        self.line_edit.setText("")
